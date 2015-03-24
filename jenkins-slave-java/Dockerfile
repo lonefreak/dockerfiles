@@ -1,7 +1,9 @@
 FROM centos:6.6
 MAINTAINER Fabricio Leotti <fabricio.lotti@gmail.com>
 
-RUN yum install -y wget tar build-essential git && yum clean all
+ENV JAVA_HOME /opt/jdk1.7.0_71
+
+RUN yum install -y which wget tar build-essential git && yum clean all
 RUN wget http://mirror.cc.columbia.edu/pub/software/apache/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz \
 	&& tar xzf apache-maven-3.0.5-bin.tar.gz -C /usr/local \
 	&& cd /usr/local \ 
