@@ -3,9 +3,9 @@ MAINTAINER Fabricio Leotti <fabricio.lotti@gmail.com>
 
 ENV JAVA_HOME /opt/jdk1.7.0_71
 
-RUN apt-get install -y which wget tar build-essential git && apt-get clean
+RUN apt-get install -y build-essential git && apt-get clean
 RUN wget http://mirror.cc.columbia.edu/pub/software/apache/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz \
 	&& tar xzf apache-maven-3.0.5-bin.tar.gz -C /usr/local \
 	&& cd /usr/local \ 
-	&& ln -s apache-maven-3.0.5 maven
-USER jenkins
+	&& ln -s apache-maven-3.0.5 maven \
+	&& ln -s /usr/local/maven/bin/mvn /usr/local/bin/mvn
