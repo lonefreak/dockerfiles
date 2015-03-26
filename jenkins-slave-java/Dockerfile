@@ -9,3 +9,5 @@ RUN wget http://mirror.cc.columbia.edu/pub/software/apache/maven/maven-3/3.0.5/b
 	&& cd /usr/local \ 
 	&& ln -s apache-maven-3.0.5 maven \
 	&& ln -s /usr/local/maven/bin/mvn /usr/local/bin/mvn
+
+CMD []
