@@ -1,7 +1,7 @@
 FROM evarga/jenkins-slave
 MAINTAINER Fabricio Leotti <fabricio.lotti@gmail.com>
 
-ENV JAVA_HOME /opt/jdk1.7.0_71
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/jre
 
 RUN apt-get update && apt-get install -y build-essential git && apt-get clean
 RUN wget http://mirror.cc.columbia.edu/pub/software/apache/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz \
