@@ -10,4 +10,6 @@ RUN wget http://mirror.cc.columbia.edu/pub/software/apache/maven/maven-3/3.0.5/b
 	&& ln -s apache-maven-3.0.5 maven \
 	&& ln -s /usr/local/maven/bin/mvn /usr/local/bin/mvn
 
+ADD desc.sh /desc.sh
+RUN chmod 777  /desc.sh
 CMD []
